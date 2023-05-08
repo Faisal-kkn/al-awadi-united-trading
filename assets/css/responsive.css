@@ -2096,6 +2096,7 @@
 
 /* Small devices (landscape phones, 576px and up) */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+	
 .container,
 .custom-container {
     max-width: 540px;
@@ -2256,6 +2257,12 @@
 	padding: 30px 25px;
 }
 
+}
+
+@media (max-width: 600px) {
+	.logo img{
+		    max-width: 250px;
+	}
 }
 
 

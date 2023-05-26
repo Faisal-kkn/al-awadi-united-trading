@@ -51,8 +51,8 @@
 :root {
     --tg-body-font-family: 'DM Sans', sans-serif;
     --tg-heading-font-family: 'Poppins', sans-serif;
-    --tg-primary-color: #045dab;
-    --tg-secondary-color: #131944;
+    --tg-primary-color: #fcb715;
+    --tg-secondary-color: #045DAB;
     --tg-body-font-color: #61657E;
     --tg-heading-font-color: #1C1C1C;
     --tg-paragraph-color: #61657E;
@@ -429,7 +429,7 @@ label {
 	text-transform: capitalize;
 	color: var(--tg-menu-color);
 	font-family: var(--tg-heading-font-family);
-	padding: 42px 22px;
+	padding: 35px 22px;
 	display: block;
 	line-height: 1;
 	position: relative;
@@ -2275,6 +2275,17 @@ label {
 	display: flex;
 	align-items: center;
 }
+.services-list .list-wrap-2 li {
+	width: 30%;
+	padding: 0 10px;
+	font-weight: 500;
+	font-size: 16px;
+	color: var(--tg-heading-font-color);
+	font-family: var(--tg-heading-font-family);
+	display: flex;
+	align-items: center;
+}
+
 .services-list .list-wrap li i {
 	font-size: 25px;
 	color: var(--tg-primary-color);

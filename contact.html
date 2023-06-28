@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/jarallax.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 
 <body>
@@ -139,7 +140,8 @@
                         <div class="contact-form-wrap" data-background="assets/img/images/contact_form_bg.jpg">
                             <h2 class="title">Contact With Us</h2>
                             <p>Send us a message and we' ll respond as soon as possible</p>
-                            <form id="submit-form" action="" class="contact-form">
+                            <div class="alert alert-success d-none" id="alert-success" role="alert"></div>
+                            <form onsubmit="sendMail(); reset(); return false;" class="contact-form">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-grp">
@@ -323,21 +325,44 @@
     <!-- JS here -->
     <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
     <script>
-        $("#submit-form").submit((e) => {
-            e.preventDefault()
-            $.ajax({
-                url: "https://script.google.com/macros/s/AKfycbwrNEAEvMFyGOAP4kpNCnRTYl6DLtGqyn4WcazoPoTBhHUP98X3i-HYVcCmQp3-sfz_3Q/exec",
-                data: $("#submit-form").serialize(),
-                method: "POST",
-                success: function (response) {
-                    alert("Message Successfully sent")
-                    window.location.reload()
+        // $("#submit-form").submit((e) => {
+        //     e.preventDefault()
+        //     $.ajax({
+        //         url: "https://script.google.com/macros/s/AKfycbwrNEAEvMFyGOAP4kpNCnRTYl6DLtGqyn4WcazoPoTBhHUP98X3i-HYVcCmQp3-sfz_3Q/exec",
+        //         data: $("#submit-form").serialize(),
+        //         method: "POST",
+        //         success: function (response) {
+        //             alert("Message Successfully sent")
+        //             window.location.reload()
+        //         },
+        //         error: function (err) {
+        //             alert("Something Error")
+        //         }
+        //     })
+        // })
+        function sendMail() {
+            Email.send({
+                SecureToken: "C973D7AD-F097-4B95-91F4-40ABC5567812",
+                To: "faisalkkn9946@gmail.com", // Replace with your email address
+                From: document.getElementById("email").value,
+                Subject: document.getElementById("subject").value,
+                Body: "<b>Name:</b> " + document.getElementById("name").value + "<br><br>" +
+                    "<b>Email:</b> " + document.getElementById("email").value + "<br><br>" +
+                    "<b>Phone:</b> " + document.getElementById("tel").value + "<br><br>" +
+                    "<b>Message:</b> " + document.getElementById("message").value
+            }).then(
+                function () {
+                    document.getElementById('alert-success').style.display = 'block';
+                    document.getElementById('alert-success').innerHTML = 'Email sent successfully!';
                 },
-                error: function (err) {
-                    alert("Something Error")
+                function (error) {
+                    console.error("Error:", error);
+                    alert("An error occurred while sending the email.");
                 }
-            })
-        })
+            );
+
+            return false; // Prevent form submission
+        }
     </script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
@@ -358,7 +383,7 @@
     <script src="assets/js/validation.js"></script>
     <script src="assets/js/main.js"></script>
 
-    
+
 
 </body>
 

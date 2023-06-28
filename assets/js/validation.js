@@ -94,8 +94,6 @@ function validateForm() {
         setTimeout(function () { submitError.style.display = 'none'; }, 3000);
         return false;
     } else {
-        msgSuccess.style.display = 'block';
-        msgSuccess.innerHTML = 'This is a success alert—check it out!';
     }
 
 

@@ -1160,7 +1160,7 @@
 	display: none;
 }
 .breadcrumb-bg {
-	padding: 90px 0;
+	padding: 50px 0;
 }
 .breadcrumb-content .title {
 	font-size: 42px;
@@ -1309,7 +1309,7 @@
 	padding: 30px 20px 30px;
 }
 .about-area {
-	padding: 0 0 100px;
+	padding: 40px 0 50px;
 }
 .services-area {
 	padding: 95px 0 70px;
@@ -1358,13 +1358,13 @@
 	bottom: -30px;
 }
 .testimonial-area {
-	padding: 95px 0 100px;
+	padding: 45px 0 80px;
 }
 .blog-area {
 	padding: 95px 0 70px;
 }
 .footer-top {
-	padding: 95px 0 100px;
+	padding: 45px 0 20px;
 }
 .footer-top .row [class*="col-"]:nth-child(2) .footer-widget {
 	margin-left: 0;
@@ -1640,13 +1640,13 @@
 	object-fit: cover;
 }
 .area-bg-three {
-	padding: 95px 0 70px;
+	padding: 45px 0 40px;
 }
 .area-bg-three .section-title {
 	margin-bottom: 40px;
 }
 .services-area-two {
-	padding-bottom: 70px;
+	padding-bottom: 20px;
 }
 .engineer-thumb img {
 	height: auto;
@@ -1774,7 +1774,7 @@
 	justify-content: center;
 }
 .about-area.inner-about-area {
-	padding: 100px 0;
+	padding: 50px 0;
 }
 .breadcrumb-content .title {
 	font-size: 36px;
@@ -1809,7 +1809,7 @@
 	padding: 95px 0 70px;
 }
 .inner-project-area {
-	padding: 95px 0 70px;
+	padding: 45px 0 40px;
 }
 .contact-info-wrap .list-wrap {
 	flex-wrap: wrap;
@@ -1841,7 +1841,7 @@
 	margin-bottom: 25px;
 }
 .contact-area {
-	padding: 100px 0;
+	padding: 50px 0;
 }
 .error-content .title {
 	font-size: 30px;
